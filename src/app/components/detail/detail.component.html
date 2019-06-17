@@ -1,0 +1,49 @@
+<div class="container fluid px-5 py-2 text-center " *ngIf="publication ; else noCourse">
+    <h1>Course: {{publication.title}}</h1>
+    <div class="row justify-content-center mt-5">
+      <div class="card mb-3 " style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{publication.imageUrl}}" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Desciption:</h5>
+              <p class="card-text">{{publication.description}}</p>
+              <div class="dropdown-divider"></div>
+              <p class="card-text m-0">Price: {{publication.price}} EUR</p>
+              <p class="card-text m-0">Duration: {{publication.duration}}</p>
+              <p class="card-text m-0">Available: 
+                <span *ngIf="publication.isAvailable; else availabeFalse" 
+                style="background-color: rgb(149, 245, 137)"> 
+                  YES 
+                </span> 
+              </p>
+            </div>
+            <div class="card-footer" *ngIf="publication.onSale" 
+            style="background-color: rgb(240, 143, 143)">
+                <small>SALE! NEW PRICE: </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <app-comment-form [publicationId]="publication.id"></app-comment-form>
+    </div>
+    <div class="container">
+      <app-comments-list [publicationId]="publication.id"></app-comments-list>
+    </div>
+</div>
+
+
+
+<ng-template #noCourse>
+    <div class="container fluid px-5 py-2 text-center">
+        <h1>There is no course!</h1>
+    </div>
+</ng-template>
+
+<ng-template #availabeFalse>
+    <span style="background-color: rgb(240, 143, 143)">No</span>
+</ng-template>

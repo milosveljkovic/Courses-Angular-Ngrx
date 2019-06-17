@@ -1,0 +1,38 @@
+{
+    "publications":
+    [
+        {
+            "id":0,
+            "title":"Angular",
+            "location":"Nis",
+            "price":1000,
+            "duration":"2 month",
+            "isAvailable":true,
+            "onSale":false,
+            "description":"Angular Course NG+NGRX",
+            "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"
+        },
+        {
+            "id":1,
+            "title":"React",
+            "location":"Belgrade",
+            "price":1200,
+            "duration":"1 month",
+            "isAvailable":true,
+            "onSale":false,
+            "description":"REACT+REDUX+TS",
+            "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
+        },
+        {
+            "id":2,
+            "title":"Vue",
+            "location":"Nis",
+            "price":700,
+            "duration":"1 month",
+            "isAvailable":true,
+            "onSale":false,
+            "description":"Vue vue vue",
+            "imageUrl":"https://cdn-images-1.medium.com/max/1200/1*yeAO-nwsAqnzr7k-zoDkoQ.png"
+        }
+    ]
+}

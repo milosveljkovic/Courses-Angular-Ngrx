@@ -1,0 +1,23 @@
+<div class="container" style="width: 500px">
+  <h3>Please leave a comment for this course!</h3>
+  <p *ngIf="!emptyField" style="background-color: rgb(245, 96, 96)" class="border border-danger rounded"> 
+    Please, fill all fields if you want to leave the comment 
+  </p>
+  <form [formGroup]="userComment" (ngSubmit)="onSubmit()">
+        <label class="mt-3">
+          Email address:
+        </label>
+        <input type="email" class="form-control" placeholder="Enter email"  formControlName="email">
+        <label class="mt-3">
+          Name:
+        </label>
+        <input type="text" class="form-control"  placeholder="Name"  formControlName="name">
+        <label class="mt-3">
+          Place for comment:
+        </label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="comment"></textarea>
+      <button class="btn btn-primary mt-3" type="submit" [disabled]="!userComment.valid">
+        Leave Comment
+      </button> 
+  </form>
+</div>
