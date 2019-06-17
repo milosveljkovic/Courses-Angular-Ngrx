@@ -1,10 +1,11 @@
 import { ActionReducerMap, reduceState } from '@ngrx/store';
-import publicationReducer from './publications.reducer'
+import {publicationReducer} from './publications.reducer'
+import {PublicationState} from './publications.reducer'
 import {commentsReducer} from './comments.reducer';
 import {CommentsState} from './comments.reducer'
 
 export interface State {
-    publications:Publication[],
+    publications:PublicationState,
     comments:CommentsState
 }
 

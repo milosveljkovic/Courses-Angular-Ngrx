@@ -1,4 +1,20 @@
 {
   "comments": [
+    {
+      "id": 1,
+      "publicationId": 0,
+      "dateOfPublish": "1560801414471",
+      "name": "Milos",
+      "email": "milosveljkovic@gmail.com",
+      "comment": "Nije los."
+    },
+    {
+      "id": 2,
+      "publicationId": 3,
+      "dateOfPublish": "1560810137762",
+      "name": "Pera Peric",
+      "email": "pera.peric123@elfak.rs",
+      "comment": "Jako sam zadovoljan znanjem koje ovaj kurs pruza. Sve preporuke."
+    }
   ]
 }

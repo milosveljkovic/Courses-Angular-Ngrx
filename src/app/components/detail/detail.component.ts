@@ -22,7 +22,7 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params:Params) => {
       const id=params['id'];
-      this.store.select(store=>store.publications?store.publications[id]:null)
+      this.store.select(store=>store.publications.entities?store.publications.entities[id]:null) //moze bolje sigutno
       .subscribe(pub=>this.publication=pub);
     })
   }

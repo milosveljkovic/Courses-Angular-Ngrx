@@ -1,8 +1,7 @@
 import {CommentsActions, CommentsActionsTypes} from '../actions/comments.action';
-import {EntityState,createEntityAdapter} from '@ngrx/entity';
+import {createEntityAdapter} from '@ngrx/entity';
 import {createFeatureSelector} from '@ngrx/store';
 import { myComment } from 'src/app/models/MyComment';
-import {CommentService} from '../../services/comment.service'
 
 
 export const commentsAdapter = createEntityAdapter<myComment>({
@@ -31,15 +30,15 @@ export interface CommentsState {
 //     entities:{
 //         1:{
 //             id:1,
-//             name:"Milos",
-//             email:"milosemail",
-//             comment:"firstComment"
+//             name:"test1",
+//             email:"test2",
+//             comment:"testtestest"
 //         },
 //         2:{
 //             id:2,
-//             name:"MilicaV",
-//             email:"milicav@gmail.com",
-//             comment:"milicaVeljkovic"
+//             name:"Test",
+//             email:"test@test.com",
+//             comment:"test"
 //         }
 //     }
 // }

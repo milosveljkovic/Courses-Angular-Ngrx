@@ -7,5 +7,7 @@ export const appRoutes: Routes =
 [
     { path: 'home', component: HomeComponent },
     { path: 'publish', component: PublishComponent },
-    { path: 'details/:id', component: DetailComponent }
+    { path: 'details/:id', component: DetailComponent },
+    { path: '',   redirectTo: '/home', pathMatch: 'full' },
+    { path: '**', redirectTo:"/home" }
 ];

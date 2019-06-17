@@ -1,5 +1,5 @@
 <div *ngFor="let com of comments | async">
     <div class="container" *ngIf="publicationId===com.publicationId">
-        <h3>{{com.email}}</h3>
+        <app-comment [comment]="com"></app-comment>
     </div>
 </div>

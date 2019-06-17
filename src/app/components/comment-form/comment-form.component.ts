@@ -39,7 +39,7 @@ export class CommentFormComponent implements OnInit {
   onSubmit(){
     if(!this.handleError()){
       this.myComment={
-        id:this.numberOfEntities,
+        id:this.numberOfEntities+1,
         publicationId:this.publicationId,
         dateOfPublish:new Date().getTime().toString(),
         name:this.userComment.value.name,

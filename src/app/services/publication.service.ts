@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 
+
 const url="http://localhost:3000/publications"  //url treba u posebnom envirementu da bude
 
 @Injectable({
@@ -22,4 +23,7 @@ export class PublicationService {
     return this.http.get<Publication>(`${url}/${id}`)
    }
 
+   public postPublication(publication:Publication):Observable<Publication>{
+    return this.http.post<Publication>(url,publication)
+   }
 }
