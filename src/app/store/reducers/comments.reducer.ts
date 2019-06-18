@@ -54,12 +54,12 @@ function sortByDate(e1: myComment, e2: myComment) {
 export function commentsReducer(state:CommentsState=initialState,action:CommentsActions) {
 
     switch(action.type){
-        case CommentsActionsTypes.ADD_ONE:{
+        case CommentsActionsTypes.ADD_COMMENT_SUCCESS:{
             return commentsAdapter.addOne(action.mycomment, state)
         }
-        case CommentsActionsTypes.ADD_All:{
-            console.log("ADD ALL");
-            return commentsAdapter.addAll(action.mycomments, state)
+        case CommentsActionsTypes.LOAD_All_COMMENTS_SUCCESS:{
+            console.log("LOAD_All_COMMENTS_SUCCESS");
+            return commentsAdapter.addAll(action.comments, state)
         }
         default:
             return state;

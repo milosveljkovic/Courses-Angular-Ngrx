@@ -16,7 +16,9 @@ import { Action } from '@ngrx/store';
 ////////////////
 export enum PublicationsActionsTypes{
     ADD_PUBLICATION='[Add Publication]',
-    ADD_ALL_PUBLICATIONS='[Add All Publications]'
+    ADD_PUBLICATION_SUCCESS='[Add publicatio Success]',
+    LOAD_ALL_PUBLICATIONS='[Load All Publications]',
+    LOAD_ALL_PUBLICATIONS_SUCCESS='[Load All Publications Success]'
 }
 
 export class AddPublication implements Action{
@@ -24,13 +26,21 @@ export class AddPublication implements Action{
     constructor(public publication:Publication){}
 }
 
-export class AddAllPublications implements Action{
-    readonly type=PublicationsActionsTypes.ADD_ALL_PUBLICATIONS;
+export class AddPublicationSuccess implements Action{
+    readonly type=PublicationsActionsTypes.ADD_PUBLICATION_SUCCESS;
+    constructor(public publication:Publication){}
+}
+
+export class LoadAllPublications implements Action{
+    readonly type=PublicationsActionsTypes.LOAD_ALL_PUBLICATIONS;
+    constructor(){}
+}
+
+export class LoadAllPublicationsSuccess implements Action{
+    readonly type=PublicationsActionsTypes.LOAD_ALL_PUBLICATIONS_SUCCESS;
     constructor(public publications:Publication[]){}
 }
 
-export type PublicationsActions =
-AddPublication
-|AddAllPublications;
+export type PublicationsActions = AddPublicationSuccess | AddPublication | LoadAllPublicationsSuccess;
 
 ////////////////

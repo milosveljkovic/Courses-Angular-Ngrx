@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import {EffectsModule} from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { rootReducer } from './store/reducers/root.reducer';
@@ -20,6 +21,8 @@ import { DetailComponent } from './components/detail/detail.component';
 import { CommentFormComponent } from './components/comment-form/comment-form.component';
 import { CommentsListComponent } from './components/comments-list/comments-list.component';
 import { CommentComponent } from './components/comment/comment.component';
+import { PublicationsEffects } from './store/effects/publications.effects';
+import { CommentsEffects } from './store/effects/comments.effects';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import { CommentComponent } from './components/comment/comment.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    EffectsModule.forRoot([PublicationsEffects,CommentsEffects]),
     StoreModule.forRoot(rootReducer),
     StoreDevtoolsModule.instrument({
       maxAge: 25

@@ -1,7 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { FormControl,FormGroup } from '@angular/forms';
 import { CommentService } from 'src/app/services/comment.service';
-import {AddOne} from '../../store/actions/comments.action'
+import {AddComment} from '../../store/actions/comments.action'
 import { Store } from '@ngrx/store';
 import {CommentsState,selectTotalComments} from '../../store/reducers/comments.reducer'
 import {myComment} from '../../models/MyComment'
@@ -46,9 +46,7 @@ export class CommentFormComponent implements OnInit {
         email:this.userComment.value.email,
         comment:this.userComment.value.comment
       }
-      this.store.dispatch(new AddOne(this.myComment))
-      this.commentService.postComment(this.myComment)
-      .subscribe(newdata=>console.log(newdata))
+      this.store.dispatch(new AddComment(this.myComment))
     }else{
       this.emptyField=false;
     }

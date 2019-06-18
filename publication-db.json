@@ -43,6 +43,17 @@
       "onSale": false,
       "description": "Learn C#",
       "imageUrl": "https://pluralsight.imgix.net/paths/path-icons/csharp-e7b8fcd4ce.png"
+    },
+    {
+      "id": 4,
+      "title": "Kurs Nemackog",
+      "location": "Jagodina",
+      "price": "300",
+      "duration": "1 month",
+      "isAvailable": true,
+      "onSale": false,
+      "description": "Naucite nemacki.",
+      "imageUrl": "http://fotkica.com/imgs3/1_75802926_Nemacka%20zastava.jpg"
     }
   ]
 }

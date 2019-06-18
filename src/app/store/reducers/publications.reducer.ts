@@ -42,12 +42,12 @@ function sortById(e1: Publication, e2: Publication) {
 export function publicationReducer(state:PublicationState=initialState,action:PublicationsActions) {
 
     switch(action.type){
-        case PublicationsActionsTypes.ADD_PUBLICATION:{
+        case PublicationsActionsTypes.ADD_PUBLICATION_SUCCESS:{
             return publicationsAdapter.addOne(action.publication, state)
         }
-        case PublicationsActionsTypes.ADD_ALL_PUBLICATIONS:{
-            console.log("ADD ALL");
-            return publicationsAdapter.addAll(action.publications, state)
+        case PublicationsActionsTypes.LOAD_ALL_PUBLICATIONS_SUCCESS:{
+            console.log("LOAD_ALL_PUBLICATIONS_SUCCESS");
+            return publicationsAdapter.addAll(action.publications,state)
         }
         default:
             return state;

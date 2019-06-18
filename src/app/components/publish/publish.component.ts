@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl,FormGroup } from '@angular/forms';
-import { PublicationService } from 'src/app/services/publication.service';
 import {AddPublication} from '../../store/actions/publications.action'
 import { Store } from '@ngrx/store';
 import { State } from 'src/app/store/reducers/root.reducer';
@@ -24,10 +23,9 @@ export class PublishComponent implements OnInit {
     imageUrl:new FormControl('')
   })
 
-  constructor(
-    private store:Store<State>,
-    private publicationService:PublicationService) { 
-      this.emptyField=true; }
+  constructor(private store:Store<State>,) { 
+      this.emptyField=true; 
+    }
 
   ngOnInit() {
   }
@@ -45,9 +43,7 @@ export class PublishComponent implements OnInit {
         description:this.userPublication.value.description,
         imageUrl:this.userPublication.value.imageUrl
       }
-      console.log(this.myPublication);
-      this.publicationService.postPublication(this.myPublication)
-      .subscribe(newpublication=>this.store.dispatch(new AddPublication(newpublication)))
+      this.store.dispatch(new AddPublication(this.myPublication));
 
     }else{
       this.emptyField=false;

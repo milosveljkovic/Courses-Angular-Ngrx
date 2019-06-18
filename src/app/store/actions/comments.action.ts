@@ -3,20 +3,34 @@ import { myComment } from 'src/app/models/MyComment';
 import { CommentsState } from '../reducers/comments.reducer';
 
 export enum CommentsActionsTypes{
-    ADD_ONE='Add One',
-    ADD_All='Add All'
+    ADD_COMMENT='[Add Comment]',
+    ADD_COMMENT_SUCCESS='[Add Comment Success]',
+    LOAD_All_COMMENTS='[Load All Comments]',
+    LOAD_All_COMMENTS_SUCCESS='[Load All Comments Success]'
 }
 
-export class AddOne implements Action{
-    readonly type=CommentsActionsTypes.ADD_ONE;
+export class AddComment implements Action{
+    readonly type=CommentsActionsTypes.ADD_COMMENT;
     constructor(public mycomment:myComment){}
 }
 
-export class AddAll implements Action{
-    readonly type=CommentsActionsTypes.ADD_All;
-    constructor(public mycomments:myComment[]){}
+export class AddCommentSuccess implements Action{
+    readonly type=CommentsActionsTypes.ADD_COMMENT_SUCCESS;
+    constructor(public mycomment:myComment){}
 }
 
-export type CommentsActions =
- AddOne
- |AddAll;
+export class LoadAllComments implements Action{
+    readonly type=CommentsActionsTypes.LOAD_All_COMMENTS;
+    constructor(){}
+}
+
+export class LoadAllCommentsSuccess implements Action{
+    readonly type=CommentsActionsTypes.LOAD_All_COMMENTS_SUCCESS;
+    constructor(public comments:myComment[]){}
+}
+
+export type CommentsActions 
+= AddComment
+| AddCommentSuccess
+| LoadAllComments
+| LoadAllCommentsSuccess
