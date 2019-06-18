@@ -3,6 +3,7 @@ interface Publication{
     title:string,
     location:string,
     price:number,
+    newPrice?:number,
     duration:string,
     isAvailable:boolean,
     onSale:boolean,

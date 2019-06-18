@@ -1,6 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { FormControl,FormGroup } from '@angular/forms';
-import { CommentService } from 'src/app/services/comment.service';
 import {AddComment} from '../../store/actions/comments.action'
 import { Store } from '@ngrx/store';
 import {CommentsState,selectTotalComments} from '../../store/reducers/comments.reducer'
@@ -25,9 +24,7 @@ export class CommentFormComponent implements OnInit {
     comment:new FormControl('')
   })
 
-  constructor(
-    private commentService:CommentService,
-    private store:Store<CommentsState>) { 
+  constructor(private store:Store<CommentsState>) { 
     this.emptyField=true;
   }
 

@@ -4,10 +4,11 @@
       "id": 0,
       "title": "Angular",
       "location": "Nis",
-      "price": 1000,
+      "price": "1200",
+      "newPrice": "1000",
       "duration": "2 month",
-      "isAvailable": true,
-      "onSale": false,
+      "isAvailable": "",
+      "onSale": true,
       "description": "Angular Course NG+NGRX",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"
     },
@@ -15,10 +16,10 @@
       "id": 1,
       "title": "React+Redux Course",
       "location": "Belgrade",
-      "price": 1200,
+      "price": "123",
       "duration": "1 month",
-      "isAvailable": true,
-      "onSale": false,
+      "isAvailable": "",
+      "onSale": true,
       "description": "REACT+REDUX+TS+SAGA",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
     },
@@ -34,24 +35,14 @@
       "imageUrl": "https://cdn-images-1.medium.com/max/1200/1*yeAO-nwsAqnzr7k-zoDkoQ.png"
     },
     {
-      "id": 3,
-      "title": "C# Course",
-      "location": "NIs",
-      "price": "455",
-      "duration": "1 month",
-      "isAvailable": true,
-      "onSale": false,
-      "description": "Learn C#",
-      "imageUrl": "https://pluralsight.imgix.net/paths/path-icons/csharp-e7b8fcd4ce.png"
-    },
-    {
       "id": 4,
       "title": "Kurs Nemackog",
       "location": "Jagodina",
       "price": "300",
+      "newPrice": "350",
       "duration": "1 month",
       "isAvailable": true,
-      "onSale": false,
+      "onSale": true,
       "description": "Naucite nemacki.",
       "imageUrl": "http://fotkica.com/imgs3/1_75802926_Nemacka%20zastava.jpg"
     }

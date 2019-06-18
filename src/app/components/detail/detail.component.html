@@ -11,7 +11,11 @@
               <h5 class="card-title">Desciption:</h5>
               <p class="card-text">{{publication.description}}</p>
               <div class="dropdown-divider"></div>
-              <p class="card-text m-0">Price: {{publication.price}} EUR</p>
+              <p class="card-text m-0">Price: 
+                <del *ngIf="publication.newPrice ; else noSale">{{publication.price}}</del> 
+                <ng-template #noSale>{{publication.price}}</ng-template>
+                EUR
+              </p>
               <p class="card-text m-0">Duration: {{publication.duration}}</p>
               <p class="card-text m-0">Available: 
                 <span *ngIf="publication.isAvailable; else availabeFalse" 
@@ -22,16 +26,23 @@
             </div>
             <div class="card-footer" *ngIf="publication.onSale" 
             style="background-color: rgb(240, 143, 143)">
-                <small>SALE! NEW PRICE: </small>
+                <small>SALE! NEW PRICE:</small> {{publication.newPrice}} EUR
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="dropdown-divider"></div>
+    <div class="container">
+      <app-publication-form [publication]="publication"></app-publication-form>
+    </div>
+    <div class="dropdown-divider"></div>
     <div class="container">
       <app-comment-form [publicationId]="publication.id"></app-comment-form>
     </div>
+    <div class="dropdown-divider"></div>
     <div class="container">
+      <h5>-Users Commetns-</h5>
       <app-comments-list [publicationId]="publication.id"></app-comments-list>
     </div>
 </div>

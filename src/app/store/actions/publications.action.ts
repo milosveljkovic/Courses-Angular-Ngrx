@@ -18,7 +18,10 @@ export enum PublicationsActionsTypes{
     ADD_PUBLICATION='[Add Publication]',
     ADD_PUBLICATION_SUCCESS='[Add publicatio Success]',
     LOAD_ALL_PUBLICATIONS='[Load All Publications]',
-    LOAD_ALL_PUBLICATIONS_SUCCESS='[Load All Publications Success]'
+    LOAD_ALL_PUBLICATIONS_SUCCESS='[Load All Publications Success]',
+    UPDATE_PUBLICATION='[Update Publications]',
+    UPDATE_PUBLICATION_SUCCESS='[Update Publications Success]',
+
 }
 
 export class AddPublication implements Action{
@@ -41,6 +44,24 @@ export class LoadAllPublicationsSuccess implements Action{
     constructor(public publications:Publication[]){}
 }
 
-export type PublicationsActions = AddPublicationSuccess | AddPublication | LoadAllPublicationsSuccess;
+export class UpdatePublication implements Action{
+    readonly type=PublicationsActionsTypes.UPDATE_PUBLICATION;
+    constructor(public updatedPublications:Publication){}
+}
+
+export class UpdatePublicationSuccess implements Action{
+    readonly type=PublicationsActionsTypes.UPDATE_PUBLICATION_SUCCESS;
+    constructor(
+        public id:number,
+        public updatedPublications:Partial<Publication>
+        ){}
+}
+
+export type PublicationsActions 
+= AddPublicationSuccess 
+| AddPublication 
+| LoadAllPublicationsSuccess
+| UpdatePublication
+| UpdatePublicationSuccess
 
 ////////////////

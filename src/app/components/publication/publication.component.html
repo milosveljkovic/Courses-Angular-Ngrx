@@ -2,7 +2,14 @@
   <img src={{publication.imageUrl}} class="card-img-top" alt="..." style="width: 18rem;height:230px">
   <div class="card-body">
     <h5 class="card-title">{{publication.title}}</h5>
-    <p class="card-text">Price: {{publication.price}} EUR</p>
+    <p class="card-text" *ngIf="publication.newPrice ; else noSale">
+      Price: <del> {{publication.price}} EUR  </del> / {{publication.newPrice}} EUR
+    </p>
+    <ng-template #noSale>
+      <p class="card-text">
+        Price: {{publication.price}} EUR
+      </p>
+    </ng-template>
     <a routerLink="/details/{{publication.id}}" class="btn btn-primary">Details</a>
   </div>
 </div>

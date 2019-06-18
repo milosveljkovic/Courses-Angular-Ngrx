@@ -49,6 +49,13 @@ export function publicationReducer(state:PublicationState=initialState,action:Pu
             console.log("LOAD_ALL_PUBLICATIONS_SUCCESS");
             return publicationsAdapter.addAll(action.publications,state)
         }
+        case PublicationsActionsTypes.UPDATE_PUBLICATION_SUCCESS:{
+            console.log("UPDATE_PUBLICATION_SUCCESS");
+            return publicationsAdapter.updateOne({
+                id:action.id,
+                changes:action.updatedPublications
+            },state)
+        }
         default:
             return state;
     }
