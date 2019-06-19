@@ -23,7 +23,7 @@ import { CommentsListComponent } from './components/comments-list/comments-list.
 import { CommentComponent } from './components/comment/comment.component';
 import { PublicationsEffects } from './store/effects/publications.effects';
 import { CommentsEffects } from './store/effects/comments.effects';
-import { PublicationFormComponent } from './components/publication-form/publication-form.component';
+import { SaleFormComponent } from './components/sale-form/sale-form.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { PublicationFormComponent } from './components/publication-form/publicat
     CommentFormComponent,
     CommentsListComponent,
     CommentComponent,
-    PublicationFormComponent
+    SaleFormComponent
   ],
   imports: [
     BrowserModule,

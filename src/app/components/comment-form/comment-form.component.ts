@@ -15,8 +15,6 @@ export class CommentFormComponent implements OnInit {
   @Input()
   publication:Publication;
 
-
-
   numberOfEntities:number;
   emptyField:boolean;
   myComment:myComment;
@@ -73,7 +71,7 @@ export class CommentFormComponent implements OnInit {
           numberOfVoters:newNumberOfVoters
         }
       }
-      
+
       this.store.dispatch(new UpdatePublication(this.publicationNewVoter))
       this.store.dispatch(new AddComment(this.myComment))
 

@@ -1,7 +1,7 @@
 <div class="container" style="width: 500px">
   <h4>Please leave a comment for this course!</h4>
   <p *ngIf="!emptyField" style="background-color: rgb(245, 96, 96)" class="border border-danger rounded"> 
-    Please, fill all fields if you want to leave the comment 
+    Please fill all fields if you want to leave the comment.
   </p>
   <form [formGroup]="userComment" (ngSubmit)="onSubmit()">
         <label class="mt-3">

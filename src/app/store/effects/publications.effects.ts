@@ -5,7 +5,7 @@ import {PublicationService} from '../../services/publication.service';
 import {map,mergeMap} from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-import {PublicationsActionsTypes,PublicationsActions, LoadAllPublications, AddPublication, UpdatePublication} from '../actions/publications.action'
+import {PublicationsActionsTypes,AddPublication, UpdatePublication} from '../actions/publications.action'
 
 @Injectable()
 export class PublicationsEffects{
@@ -17,7 +17,10 @@ export class PublicationsEffects{
             ofType(PublicationsActionsTypes.LOAD_ALL_PUBLICATIONS),
             mergeMap(()=>this.publicationService.getAllPublications()
             .pipe(
-                map(publications=>({type:PublicationsActionsTypes.LOAD_ALL_PUBLICATIONS_SUCCESS,publications:publications}))
+                map(publications=>({
+                    type:PublicationsActionsTypes.LOAD_ALL_PUBLICATIONS_SUCCESS,
+                    publications:publications
+                }))
                 )
             )
         )
@@ -29,7 +32,10 @@ export class PublicationsEffects{
         map((action)=>action.publication),
         mergeMap((newPublication)=>this.publicationService.postPublication(newPublication)
         .pipe(
-            map((publication)=>({type:PublicationsActionsTypes.ADD_PUBLICATION_SUCCESS,publication:publication}))
+            map((publication)=>({
+                type:PublicationsActionsTypes.ADD_PUBLICATION_SUCCESS,
+                publication:publication
+            }))
             )
         )
         )

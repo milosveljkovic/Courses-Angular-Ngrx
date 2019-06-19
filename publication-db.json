@@ -48,7 +48,7 @@
     },
     {
       "id": 3,
-      "title": "Vue Beginners Level",
+      "title": "Vue Beginner Level",
       "location": "Nis",
       "price": 450,
       "newPrice": "350",
@@ -67,9 +67,10 @@
       "title": "Android Kotlin Developer",
       "location": "Novi Sad, Serbia",
       "price": "200",
+      "newPrice": "180",
       "duration": "1 month",
       "isAvailable": true,
-      "onSale": false,
+      "onSale": true,
       "description": "Learn how to make online games, and apps for Android Q, like Pokémon , twitter,Tic Tac Toe, and notepad using Kotlin",
       "imageUrl": "https://cdn.freebiesupply.com/logos/thumbs/2x/kotlin-2-logo.png",
       "rating": {
