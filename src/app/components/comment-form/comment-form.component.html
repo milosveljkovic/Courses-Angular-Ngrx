@@ -16,6 +16,10 @@
           Place for comment:
         </label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="comment"></textarea>
+        <label class="mt-3">
+          Rate this course:
+        </label>
+        <input type="number" min="0" max="10" class="form-control"  placeholder="0"  formControlName="rating">
       <button class="btn btn-primary mt-3" type="submit" [disabled]="!userComment.valid">
         Leave Comment
       </button> 

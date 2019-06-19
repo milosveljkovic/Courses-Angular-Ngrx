@@ -5,4 +5,5 @@ export interface myComment{
     email:string;
     name:string;
     comment:string;
+    rating?:number;
 }

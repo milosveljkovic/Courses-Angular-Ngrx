@@ -8,5 +8,9 @@ interface Publication{
     isAvailable:boolean,
     onSale:boolean,
     description:string,
-    imageUrl?:string
+    imageUrl?:string,
+    rating:{
+        votersRatingSum:number,
+        numberOfVoters:number
+    }
 }

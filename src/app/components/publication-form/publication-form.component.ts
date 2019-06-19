@@ -16,7 +16,6 @@ export class PublicationFormComponent implements OnInit {
   @Input()
   publication:Publication;
 
-
   newPrice=new FormControl('');
 
   constructor(private store:Store<PublicationState>) { }
@@ -37,7 +36,11 @@ export class PublicationFormComponent implements OnInit {
       isAvailable:this.publication.isAvailable,
       onSale:this.publication.onSale,
       description:this.publication.description,
-      imageUrl:this.publication.imageUrl
+      imageUrl:this.publication.imageUrl,
+      rating:{
+        votersRatingSum:this.publication.rating.votersRatingSum,
+        numberOfVoters:this.publication.rating.numberOfVoters
+      }
     }
     this.store.dispatch(new UpdatePublication(this.updatedPublication))
   }

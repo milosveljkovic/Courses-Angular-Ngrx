@@ -2,27 +2,39 @@
   "comments": [
     {
       "id": 1,
-      "publicationId": 0,
-      "dateOfPublish": "1560801414471",
-      "name": "Milos",
+      "publicationId": 1,
+      "dateOfPublish": "1560946743192",
+      "name": "Milos Veljkovic",
       "email": "milosveljkovic@gmail.com",
-      "comment": "Nije los."
+      "comment": "The material is well organised and very easy to understand. The instructor goes to the point, keep focus on main concept, good pace.",
+      "rating": 8
     },
     {
       "id": 2,
-      "publicationId": 3,
-      "dateOfPublish": "1560810137762",
-      "name": "Pera Peric",
-      "email": "pera.peric123@elfak.rs",
-      "comment": "Jako sam zadovoljan znanjem koje ovaj kurs pruza. Sve preporuke."
+      "publicationId": 1,
+      "dateOfPublish": "1560946822687",
+      "name": "Maxim Looije",
+      "email": "maxim.looije@gmail.com",
+      "comment": "I liked following the evolution of his examples, from getting the stuff running to the recommended final versions through the refactoring steps.",
+      "rating": 9
     },
     {
       "id": 3,
-      "publicationId": 4,
-      "dateOfPublish": "1560868573450",
-      "name": "MikaPera",
-      "email": "MikaPera",
-      "comment": "Uzasan kurs. 0 "
+      "publicationId": 2,
+      "dateOfPublish": "1560946938048",
+      "name": "Adrian Zawadzki",
+      "email": "adrian.zawadzki@gmail.com",
+      "comment": "Great Course and would have even better if there is some textual presentation with core concepts along with oral explanation and also interview questions and answers",
+      "rating": 7
+    },
+    {
+      "id": 4,
+      "publicationId": 2,
+      "dateOfPublish": "1560947009039",
+      "name": "Alexander Kozlovich",
+      "email": "alexanderkozlovich96@gmail.com",
+      "comment": "Really good course. It helped me a lot in understanding core principles of react and how build an app from scratch. Definitely best course out there",
+      "rating": 10
     }
   ]
 }

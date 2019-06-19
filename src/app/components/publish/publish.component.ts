@@ -3,6 +3,7 @@ import { FormControl,FormGroup } from '@angular/forms';
 import {AddPublication} from '../../store/actions/publications.action'
 import { Store } from '@ngrx/store';
 import { State } from 'src/app/store/reducers/root.reducer';
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-publish',
@@ -23,7 +24,7 @@ export class PublishComponent implements OnInit {
     imageUrl:new FormControl('')
   })
 
-  constructor(private store:Store<State>,) { 
+  constructor(private store:Store<State>,private router: Router) { 
       this.emptyField=true; 
     }
 
@@ -31,7 +32,7 @@ export class PublishComponent implements OnInit {
   }
 
   onSubmit(){
-    if(true){
+    if(this.handleError()){
       this.myPublication={
         id:0,
         title:this.userPublication.value.title,
@@ -41,9 +42,14 @@ export class PublishComponent implements OnInit {
         isAvailable: true,
         onSale: false,
         description:this.userPublication.value.description,
-        imageUrl:this.userPublication.value.imageUrl
+        imageUrl:this.userPublication.value.imageUrl,
+        rating:{
+          votersRatingSum:0,
+          numberOfVoters:0
+        }
       }
       this.store.dispatch(new AddPublication(this.myPublication));
+      this.router.navigate(['/home'])
 
     }else{
       this.emptyField=false;
@@ -54,9 +60,9 @@ export class PublishComponent implements OnInit {
     if(this.userPublication.value.title.length===0
       || this.userPublication.value.price.length===0
       || this.userPublication.value.description.length===0)
-    return true;
-
     return false;
+
+    return true;
   }
 
 }
