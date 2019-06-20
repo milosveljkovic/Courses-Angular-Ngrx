@@ -2,7 +2,7 @@ import { Component, OnInit,Input } from '@angular/core';
 import { FormControl,FormGroup } from '@angular/forms';
 import {AddComment} from '../../store/actions/comments.action'
 import { Store } from '@ngrx/store';
-import {CommentsState,selectTotalComments} from '../../store/reducers/comments.reducer'
+import {CommentsState,selectTotalComments} from '../../store/adapters/comments.adapter'
 import {myComment} from '../../models/MyComment'
 import {UpdatePublication} from '../../store/actions/publications.action'
 

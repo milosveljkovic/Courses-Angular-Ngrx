@@ -1,6 +1,5 @@
 import {Action} from '@ngrx/store';
 import { myComment } from 'src/app/models/MyComment';
-import { CommentsState } from '../reducers/comments.reducer';
 
 export enum CommentsActionsTypes{
     ADD_COMMENT='[Add Comment]',

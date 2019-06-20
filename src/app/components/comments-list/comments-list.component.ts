@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import {CommentsState,selectAllComments} from '../../store/reducers/comments.reducer'
+import {CommentsState,selectAllComments} from '../../store/adapters/comments.adapter'
 
 @Component({
   selector: 'app-comments-list',

@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import {myComment} from '../models/MyComment'
+import { urlEnvironment } from '../constants/url'
 
-
-const url="http://localhost:3001/comments"  //url treba u posebnom envirementu da bude
+const comments_url=urlEnvironment.COMMENTS_DB_URL;
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +17,12 @@ export class CommentService {
    }
 
    public getAllComments():Observable<myComment[]>{
-    return this.http.get<myComment[]>(url);
+    return this.http.get<myComment[]>(comments_url);
    }
 
     postComment(comment:myComment):Observable<myComment>{
       console.log(comment);
-     return this.http.post<myComment>(url,comment)
+     return this.http.post<myComment>(comments_url,comment)
    }
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import {PublicationState} from '../../store/reducers/publications.reducer'
+import {PublicationState} from '../../store/adapters/publications.adapter'
 import {UpdatePublication} from '../../store/actions/publications.action'
 import { Router } from '@angular/router';
 

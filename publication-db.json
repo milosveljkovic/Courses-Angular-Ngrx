@@ -36,9 +36,10 @@
       "title": "React+Redux Course",
       "location": "Belgrade",
       "price": "300",
+      "newPrice": "250",
       "duration": "2 month",
       "isAvailable": true,
-      "onSale": false,
+      "onSale": true,
       "description": "REACT+REDUX+TS+SAGA",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
       "rating": {

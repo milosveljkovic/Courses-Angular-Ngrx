@@ -1,27 +1,13 @@
 import { Action } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
-// export const LOAD_PUBLICATIONS = "[Load publications]"; 
-// export const ADD_PUBLICATION = "[Add publication]"; 
-
-// export class LoadPublications implements Action{
-//     type = LOAD_PUBLICATIONS;
-//     constructor(public publications: Publication[]) {}
-// }
-
-// export class AddPublication implements Action{
-//     type = ADD_PUBLICATION;
-//     constructor(public publication: Publication) {}
-// }
-
-////////////////
 export enum PublicationsActionsTypes{
     ADD_PUBLICATION='[Add Publication]',
     ADD_PUBLICATION_SUCCESS='[Add publicatio Success]',
     LOAD_ALL_PUBLICATIONS='[Load All Publications]',
     LOAD_ALL_PUBLICATIONS_SUCCESS='[Load All Publications Success]',
     UPDATE_PUBLICATION='[Update Publications]',
-    UPDATE_PUBLICATION_SUCCESS='[Update Publications Success]',
-
+    UPDATE_PUBLICATION_SUCCESS='[Update Publications Success]'
 }
 
 export class AddPublication implements Action{
@@ -62,6 +48,6 @@ export type PublicationsActions
 | AddPublication 
 | LoadAllPublicationsSuccess
 | UpdatePublication
-| UpdatePublicationSuccess
+| UpdatePublicationSuccess;
 
 ////////////////

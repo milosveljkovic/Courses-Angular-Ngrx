@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import {urlEnvironment} from '../constants/url'
 
-
-const url="http://localhost:3000/publications"  //url treba u posebnom envirementu da bude
+const publication_url=urlEnvironment.PUBLICATION_DB_URL
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -23,18 +23,18 @@ export class PublicationService {
    }
 
    public getAllPublications():Observable<Publication[]>{
-    return this.http.get<Publication[]>(url);
+    return this.http.get<Publication[]>(publication_url);
    }
 
    public getPublicationById(id:number):Observable<Publication>{
-    return this.http.get<Publication>(`${url}/${id}`)
+    return this.http.get<Publication>(`${publication_url}/${id}`)
    }
 
    public postPublication(publication:Publication):Observable<Publication>{
-    return this.http.post<Publication>(url,publication)
+    return this.http.post<Publication>(publication_url,publication)
    }
 
    public putPublication(publication:Publication):Observable<Publication>{
-     return this.http.put<Publication>(`${url}/${publication.id}`,publication,httpOptions)
+     return this.http.put<Publication>(`${publication_url}/${publication.id}`,publication,httpOptions)
    }
 }
