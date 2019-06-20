@@ -24,6 +24,8 @@ import { CommentComponent } from './components/comment/comment.component';
 import { PublicationsEffects } from './store/effects/publications.effects';
 import { CommentsEffects } from './store/effects/comments.effects';
 import { SaleFormComponent } from './components/sale-form/sale-form.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { SaleFormComponent } from './components/sale-form/sale-form.component';
     CommentFormComponent,
     CommentsListComponent,
     CommentComponent,
-    SaleFormComponent
+    SaleFormComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

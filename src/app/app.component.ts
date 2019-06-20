@@ -12,7 +12,7 @@ import { LoadAllComments } from './store/actions/comments.action';
 export class AppComponent {
   title = 'rwa';
 
-  constructor(private store:Store<State>,) {
+  constructor(private store:Store<State>) {
    }
 
   ngOnInit(){

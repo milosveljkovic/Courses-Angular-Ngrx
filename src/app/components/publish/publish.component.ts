@@ -29,6 +29,10 @@ export class PublishComponent implements OnInit {
     }
 
   ngOnInit() {
+    //redirect
+    if(localStorage.getItem("LoggedSuccess")!=="true"){
+      this.router.navigate(['login'])
+    }
   }
 
   onSubmit(){
