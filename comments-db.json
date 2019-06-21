@@ -2,39 +2,21 @@
   "comments": [
     {
       "id": 1,
-      "publicationId": 1,
-      "dateOfPublish": "1560946743192",
-      "name": "Milos Veljkovic",
-      "email": "milosveljkovic@gmail.com",
-      "comment": "The material is well organised and very easy to understand. The instructor goes to the point, keep focus on main concept, good pace.",
-      "rating": 8
-    },
-    {
-      "id": 2,
-      "publicationId": 1,
-      "dateOfPublish": "1560946822687",
-      "name": "Maxim Looije",
-      "email": "maxim.looije@gmail.com",
-      "comment": "I liked following the evolution of his examples, from getting the stuff running to the recommended final versions through the refactoring steps.",
+      "publicationId": 2,
+      "dateOfPublish": "1561126220500",
+      "name": "Mild Orange",
+      "email": "mildorange@gmail.com",
+      "comment": "This is a Complete course on angular. perfect examples and assignments. Great job Milos and team !!",
       "rating": 9
     },
     {
-      "id": 3,
+      "id": 2,
       "publicationId": 2,
-      "dateOfPublish": "1560946938048",
-      "name": "Adrian Zawadzki",
-      "email": "adrian.zawadzki@gmail.com",
-      "comment": "Great Course and would have even better if there is some textual presentation with core concepts along with oral explanation and also interview questions and answers",
-      "rating": 7
-    },
-    {
-      "id": 4,
-      "publicationId": 2,
-      "dateOfPublish": "1560947009039",
-      "name": "Alexander Kozlovich",
-      "email": "alexanderkozlovich96@gmail.com",
-      "comment": "Really good course. It helped me a lot in understanding core principles of react and how build an app from scratch. Definitely best course out there",
-      "rating": 10
+      "dateOfPublish": "1561128575835",
+      "name": "Udemy",
+      "email": "udemy@gmail.com",
+      "comment": "This is a good course, I learned a lot on new things and already used some of these in the real world project.",
+      "rating": 8
     }
   ]
 }

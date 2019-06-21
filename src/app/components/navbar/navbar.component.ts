@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserLogout } from 'src/app/store/actions/user.action';
 import {Store} from '@ngrx/store'
 import {State} from '../../store/reducers/root.reducer'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -15,6 +16,7 @@ export class NavbarComponent implements OnInit {
   alreadyLogged:boolean;
 
   ngOnInit() {
+
     if(localStorage.getItem("LoggedSuccess")==="true"){
       this.alreadyLogged=true;
     }else{

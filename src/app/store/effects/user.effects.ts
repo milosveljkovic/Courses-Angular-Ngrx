@@ -4,7 +4,7 @@ import {UserService} from '../../services/user.service';
 
 import {map,mergeMap} from 'rxjs/operators';
 
-import {UserActionsTypes,LoadUser, AddToMyPublication} from '../actions/user.action'
+import {UserActionsTypes,LoadUser, AddToMyPublication, AddToMyComments} from '../actions/user.action'
 
 @Injectable()
 export class UserEffects{
@@ -34,6 +34,21 @@ export class UserEffects{
         .pipe(
             map((user)=>({
                 type:UserActionsTypes.ADD_TO_MY_PUBLICATIONS_SUCCESS,
+                user:user
+            }))
+            )
+        )
+        )
+    )
+
+    addToMyComments=createEffect(()=>
+    this.actions$.pipe(
+        ofType<AddToMyComments>(UserActionsTypes.ADD_TO_MY_COMMENTS),
+        map((action)=>action.user),
+        mergeMap((user)=>this.userService.updateUser(user)
+        .pipe(
+            map((user)=>({
+                type:UserActionsTypes.ADD_TO_MY_COMMENTS_SUCCESS,
                 user:user
             }))
             )

@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   constructor(private store:Store<PublicationState>,private router:Router) {
    }
 
-  ngOnInit() {
+  ngOnInit() { 
 
     if(localStorage.getItem("LoggedSuccess")!=="true"){
       this.router.navigate(['login'])

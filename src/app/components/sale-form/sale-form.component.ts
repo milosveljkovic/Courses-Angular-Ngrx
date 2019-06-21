@@ -12,10 +12,10 @@ import { State } from 'src/app/store/reducers/root.reducer';
   styleUrls: ['./sale-form.component.css']
 })
 export class SaleFormComponent implements OnInit {
+
   @Input()
   publication:Publication;
 
-  updatedPublication:Publication
   emptyField:boolean;
 
   newPrice=new FormControl('');
@@ -30,26 +30,9 @@ export class SaleFormComponent implements OnInit {
   setNewPrice(){
     if(this.handleError()){
    this.publication.onSale=true
+   this.publication.newPrice=this.newPrice.value;
 
-    this.updatedPublication={
-      id:this.publication.id,
-      title:this.publication.title,
-      location:this.publication.location,
-      price:this.publication.price,
-      newPrice:this.newPrice.value,
-      duration:this.publication.duration,
-      isAvailable:this.publication.isAvailable,
-      onSale:this.publication.onSale,
-      description:this.publication.description,
-      imageUrl:this.publication.imageUrl,
-      rating:
-      {
-        votersRatingSum:this.publication.rating.votersRatingSum,
-        numberOfVoters:this.publication.rating.numberOfVoters
-      },
-      publisher:this.publication.publisher
-    }
-    this.store.dispatch(new UpdatePublication(this.updatedPublication))
+    this.store.dispatch(new UpdatePublication(this.publication))
     this.router.navigate(['/home'])
   }else{
     this.emptyField=false;

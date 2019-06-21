@@ -1,74 +1,58 @@
 {
   "publications": [
     {
-      "id": 0,
-      "title": "Elixir crash course",
-      "location": "Nis, Elfak",
-      "price": "150",
+      "id": 1,
+      "title": "Elixir Crush Course",
+      "location": "Nis, Serbia",
+      "price": "180",
       "duration": "1 month",
       "isAvailable": true,
       "onSale": false,
-      "description": "Become a elixir developer.",
-      "imageUrl": "https://developer.fedoraproject.org/static/logo/elixir.png",
+      "description": "Understand the key tenets of functional programming, immutable data, pattern matching and recursion",
+      "imageUrl": "https://avatars0.githubusercontent.com/u/1481354?s=400&v=4",
       "rating": {
         "votersRatingSum": 0,
         "numberOfVoters": 0
-      }
+      },
+      "publisher": "Milos Veljkovic"
     },
     {
-      "id": 1,
+      "id": 2,
       "title": "Angular Advanced",
-      "location": "Nis",
+      "location": "Belgrade , Serbia",
       "price": "240",
-      "newPrice": "200",
-      "duration": "1 month",
+      "duration": "2 month",
       "isAvailable": true,
-      "onSale": true,
-      "description": "Angular Course-NG+NGRX",
+      "onSale": false,
+      "description": "What you will learn: Angular / NGRX ",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
       "rating": {
         "votersRatingSum": 17,
         "numberOfVoters": 2
-      }
-    },
-    {
-      "id": 2,
-      "title": "React+Redux Course",
-      "location": "Belgrade",
-      "price": "300",
-      "newPrice": "250",
-      "duration": "2 month",
-      "isAvailable": true,
-      "onSale": true,
-      "description": "REACT+REDUX+TS+SAGA",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
-      "rating": {
-        "votersRatingSum": 17,
-        "numberOfVoters": 2
-      }
+      },
+      "publisher": "Milos Veljkovic"
     },
     {
       "id": 3,
-      "title": "Vue Beginner Level",
-      "location": "Nis",
-      "price": 450,
-      "newPrice": "350",
+      "title": "React+Redux Course",
+      "location": "Belgrade",
+      "price": "300",
       "duration": "2 month",
       "isAvailable": true,
-      "onSale": true,
-      "description": "Vue crush course for beginners",
-      "imageUrl": "https://cdn-images-1.medium.com/max/1200/1*yeAO-nwsAqnzr7k-zoDkoQ.png",
+      "onSale": false,
+      "description": "This course consist of next parts: React, Redux and Saga. Also you will learn about typescript.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
       "rating": {
         "votersRatingSum": 0,
         "numberOfVoters": 0
-      }
+      },
+      "publisher": "Mild Orange"
     },
     {
       "id": 4,
       "title": "Android Kotlin Developer",
       "location": "Novi Sad, Serbia",
       "price": "200",
-      "newPrice": "180",
       "duration": "1 month",
       "isAvailable": true,
       "onSale": true,
@@ -77,23 +61,25 @@
       "rating": {
         "votersRatingSum": 0,
         "numberOfVoters": 0
-      }
+      },
+      "publisher": "Mild Orange",
+      "newPrice": "180"
     },
     {
       "id": 5,
-      "title": "Modern JavaScript",
-      "location": "London",
-      "price": "175",
-      "duration": "1 month",
+      "title": "C# Unity",
+      "location": "Nis, Serbia",
+      "price": "195",
+      "duration": "3 weeks",
       "isAvailable": true,
       "onSale": false,
-      "description": "What you'll learn\nModular learning sections & 10 real world projects with pure JavaScript",
-      "imageUrl": "https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png",
+      "description": "Learn C#, a powerful modern language, from scratch. No prior programming experience is necessary.",
+      "imageUrl": "https://www.inventivestudio.co.uk/wp-content/uploads/2018/04/unity3d_logo.png",
       "rating": {
         "votersRatingSum": 0,
         "numberOfVoters": 0
       },
-      "publisher": "milosveljkovic"
+      "publisher": "Udemy"
     }
   ]
 }

@@ -40,15 +40,13 @@ export class PublishComponent implements OnInit {
 
     this.store.select(selectTotalPublications)
     .subscribe(numberOfPuublications=>this.numberOfEntities=numberOfPuublications);
-    console.log(this.numberOfEntities);
     this.store.select(state=>state.user).subscribe(user=>this.user=user)
   }
 
   onSubmit(){
-    console.log(this.user)
     if(this.handleError()){
       this.myPublication={
-        id:this.numberOfEntities,
+        id:this.numberOfEntities+1,
         title:this.userPublication.value.title,
         location:this.userPublication.value.location,
         price:this.userPublication.value.price,
@@ -64,7 +62,7 @@ export class PublishComponent implements OnInit {
         publisher:this.user.name
       }
 
-      this.user.mypublications.push(this.numberOfEntities);
+      this.user.mypublications.push(this.numberOfEntities+1);
 
       this.store.dispatch(new AddToMyPublication(this.user));
       this.store.dispatch(new AddPublication(this.myPublication));

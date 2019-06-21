@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import {CommentsState,selectAllComments} from '../../store/adapters/comments.adapter'
+import { myComment } from 'src/app/models/MyComment';
 
 @Component({
   selector: 'app-comments-list',
@@ -11,15 +12,12 @@ import {CommentsState,selectAllComments} from '../../store/adapters/comments.ada
 export class CommentsListComponent implements OnInit {
 
   @Input()
-  publicationId:number;
+  comments:Observable<myComment[]>;
 
-  comments:Observable<any>;
-
-  constructor(private store:Store<CommentsState>) {
+  constructor() {
      }
 
   ngOnInit() {
-    this.comments=this.store.select(selectAllComments);
   }
 
 }
