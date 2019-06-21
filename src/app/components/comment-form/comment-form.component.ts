@@ -50,10 +50,6 @@ export class CommentFormComponent implements OnInit {
 
       var newNumberOfVoters:number=this.publication.rating.numberOfVoters+1;
       var newVotersRatingSum:number=this.publication.rating.votersRatingSum+this.userComment.value.rating
-      console.log(newVotersRatingSum);
-      console.log(this.userComment.value.rating);
-      console.log(this.publication.rating.votersRatingSum);
-      
 
       this.publicationNewVoter={
         id:this.publication.id,
@@ -69,7 +65,8 @@ export class CommentFormComponent implements OnInit {
         rating:{
           votersRatingSum:newVotersRatingSum,
           numberOfVoters:newNumberOfVoters
-        }
+        },
+        publisher:this.publication.publisher
       }
 
       this.store.dispatch(new UpdatePublication(this.publicationNewVoter))

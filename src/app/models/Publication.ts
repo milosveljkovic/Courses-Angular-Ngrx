@@ -12,5 +12,6 @@ interface Publication{
     rating:{
         votersRatingSum:number,
         numberOfVoters:number
-    }
+    },
+    publisher:string
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserLogout } from 'src/app/store/actions/user.action';
+import {Store} from '@ngrx/store'
+import {State} from '../../store/reducers/root.reducer'
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store:Store<State>) { }
 
   alreadyLogged:boolean;
 
@@ -22,6 +25,7 @@ export class NavbarComponent implements OnInit {
 
   handleLogout(){
     localStorage.clear();
+    this.store.dispatch(new UserLogout())
   }
 
 }

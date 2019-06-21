@@ -32,7 +32,9 @@ export class RegisterComponent implements OnInit {
       id:0,
       name:this.user.value.name,
       email:this.user.value.email,
-      password:this.user.value.password
+      password:this.user.value.password,
+      mypublications:[],
+      mycomments:[]
     }
 
   this.userService.userRegistration(this.newUser)

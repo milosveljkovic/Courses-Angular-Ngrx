@@ -4,6 +4,8 @@ import {AddPublication} from '../../store/actions/publications.action'
 import { Store } from '@ngrx/store';
 import { State } from 'src/app/store/reducers/root.reducer';
 import {Router} from "@angular/router"
+import { selectTotalPublications } from 'src/app/store/adapters/publications.adapter';
+import { AddToMyPublication } from 'src/app/store/actions/user.action';
 
 @Component({
   selector: 'app-publish',
@@ -14,6 +16,8 @@ export class PublishComponent implements OnInit {
 
   emptyField:boolean;
   myPublication:Publication;
+  numberOfEntities:number;
+  user:User;
 
   userPublication=new FormGroup({
     title:new FormControl(''),
@@ -33,12 +37,18 @@ export class PublishComponent implements OnInit {
     if(localStorage.getItem("LoggedSuccess")!=="true"){
       this.router.navigate(['login'])
     }
+
+    this.store.select(selectTotalPublications)
+    .subscribe(numberOfPuublications=>this.numberOfEntities=numberOfPuublications);
+    console.log(this.numberOfEntities);
+    this.store.select(state=>state.user).subscribe(user=>this.user=user)
   }
 
   onSubmit(){
+    console.log(this.user)
     if(this.handleError()){
       this.myPublication={
-        id:0,
+        id:this.numberOfEntities,
         title:this.userPublication.value.title,
         location:this.userPublication.value.location,
         price:this.userPublication.value.price,
@@ -50,8 +60,13 @@ export class PublishComponent implements OnInit {
         rating:{
           votersRatingSum:0,
           numberOfVoters:0
-        }
+        },
+        publisher:this.user.name
       }
+
+      this.user.mypublications.push(this.numberOfEntities);
+
+      this.store.dispatch(new AddToMyPublication(this.user));
       this.store.dispatch(new AddPublication(this.myPublication));
       this.router.navigate(['/home'])
 

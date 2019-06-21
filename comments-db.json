@@ -36,19 +36,5 @@
       "comment": "Really good course. It helped me a lot in understanding core principles of react and how build an app from scratch. Definitely best course out there",
       "rating": 10
     }
-  ],
-  "users": [
-    {
-      "id": 0,
-      "email": "test@gmail.com",
-      "password": "123456",
-      "name": "Milos Veljkovic"
-    },
-    {
-      "id": 1,
-      "name": "Milos Veljkovic",
-      "email": "milosveljkovic@gmail.com",
-      "password": "milosveljkovic"
-    }
   ]
 }

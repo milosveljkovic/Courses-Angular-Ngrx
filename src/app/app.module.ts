@@ -26,6 +26,7 @@ import { CommentsEffects } from './store/effects/comments.effects';
 import { SaleFormComponent } from './components/sale-form/sale-form.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { UserEffects } from './store/effects/user.effects';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { RegisterComponent } from './components/register/register.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    EffectsModule.forRoot([PublicationsEffects,CommentsEffects]),
+    EffectsModule.forRoot([PublicationsEffects,CommentsEffects,UserEffects]),
     StoreModule.forRoot(rootReducer),
     StoreDevtoolsModule.instrument({
       maxAge: 25

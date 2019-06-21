@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import {urlEnvironment} from '../constants/url'
 
-const user_url=urlEnvironment.DB_URL;
+const users_url=urlEnvironment.USERS_URL;
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization': 'my-auth-token'
+  })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +23,18 @@ export class UserService {
    }
 
    public GetUserWithEmailAndPassword(email:string,password:string):Observable<User>{
-    return this.http.get<User>(`${user_url}/users?email=${email}&password=${password}`);
+    return this.http.get<User>(`${users_url}?email=${email}&password=${password}`);
    }
 
    public userRegistration(user:User):Observable<User>{
-     return this.http.post<User>(`${user_url}/users`,user);
+     return this.http.post<User>(`${users_url}`,user);
    }
 
+   public GetUserById(id:number):Observable<User>{
+    return this.http.get<User>(`${users_url}?id=${id}`);
+   }
+
+   public updateUser(user:User):Observable<User>{
+   return this.http.put<User>(`${users_url}/${user.id}`,user,httpOptions);
+  }
 }

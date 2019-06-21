@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import {PublicationState} from '../../store/adapters/publications.adapter'
 import {UpdatePublication} from '../../store/actions/publications.action'
 import { Router } from '@angular/router';
+import { State } from 'src/app/store/reducers/root.reducer';
 
 @Component({
   selector: 'app-sale-form',
@@ -19,7 +20,7 @@ export class SaleFormComponent implements OnInit {
 
   newPrice=new FormControl('');
 
-  constructor(private store:Store<PublicationState>,private router:Router) {
+  constructor(private store:Store<State>,private router:Router) {
     this.emptyField=true;
    }
 
@@ -45,7 +46,8 @@ export class SaleFormComponent implements OnInit {
       {
         votersRatingSum:this.publication.rating.votersRatingSum,
         numberOfVoters:this.publication.rating.numberOfVoters
-      }
+      },
+      publisher:this.publication.publisher
     }
     this.store.dispatch(new UpdatePublication(this.updatedPublication))
     this.router.navigate(['/home'])

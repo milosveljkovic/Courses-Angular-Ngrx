@@ -78,6 +78,22 @@
         "votersRatingSum": 0,
         "numberOfVoters": 0
       }
+    },
+    {
+      "id": 5,
+      "title": "Modern JavaScript",
+      "location": "London",
+      "price": "175",
+      "duration": "1 month",
+      "isAvailable": true,
+      "onSale": false,
+      "description": "What you'll learn\nModular learning sections & 10 real world projects with pure JavaScript",
+      "imageUrl": "https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png",
+      "rating": {
+        "votersRatingSum": 0,
+        "numberOfVoters": 0
+      },
+      "publisher": "milosveljkovic"
     }
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "email": "test@gmail.com",
+      "password": "123456",
+      "name": "Milos Veljkovic"
+    },
+    {
+      "id": 1,
+      "name": "Milos Veljkovic",
+      "email": "milosveljkovic@gmail.com",
+      "password": "milosveljkovic"
+    },
+    {
+      "id": 2,
+      "name": "milosveljkovic",
+      "email": "milosveljko@gmail.com",
+      "password": "111111",
+      "mypublications": [
+        5
+      ],
+      "mycomments": []
+    }
+  ]
+}

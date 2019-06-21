@@ -4,7 +4,7 @@ import { HttpClient,HttpHeaders } from '@angular/common/http';
 import {myComment} from '../models/MyComment'
 import { urlEnvironment } from '../constants/url'
 
-const comments_url=urlEnvironment.DB_URL;
+const comments_url=urlEnvironment.COMMENTS_URL;
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +17,12 @@ export class CommentService {
    }
 
    public getAllComments():Observable<myComment[]>{
-    return this.http.get<myComment[]>(`${comments_url}/comments`);
+    return this.http.get<myComment[]>(`${comments_url}`);
    }
 
     postComment(comment:myComment):Observable<myComment>{
       console.log(comment);
-     return this.http.post<myComment>(`${comments_url}/comments`,comment)
+     return this.http.post<myComment>(`${comments_url}`,comment)
    }
 
 }

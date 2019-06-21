@@ -3,4 +3,6 @@ interface User{
     email:string;
     password:string;
     name:string;
+    mypublications?:number[],
+    mycomments?:number[]
 }

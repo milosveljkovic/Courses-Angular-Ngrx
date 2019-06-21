@@ -13,10 +13,13 @@ import { PublicationService } from 'src/app/services/publication.service';
 export class DetailComponent implements OnInit {
 
   publication:Publication;
+  isMyPublication:boolean;
+  user:User;
 
   constructor(
     private route:ActivatedRoute,
     private store:Store<State>) { 
+      this.isMyPublication=false;
     }
 
   ngOnInit() {
@@ -25,6 +28,18 @@ export class DetailComponent implements OnInit {
       this.store.select(store=>store.publications.entities?store.publications.entities[id]:null)
       .subscribe(pub=>this.publication=pub);
     })
+
+    this.store.select(state=>state.user).subscribe(user=>this.user=user);
+    if(this.publication){
+    if(this.myPublication(this.user,this.publication.id)){
+      this.isMyPublication=true;
+    }
+  }
+
+  }
+
+  myPublication(user:User,id:number){
+      return user.mypublications.includes(id);
   }
 
 }
