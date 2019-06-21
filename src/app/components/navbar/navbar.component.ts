@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private store:Store<State>) { }
+  constructor(private store:Store<State>,private router:Router) { }
 
   alreadyLogged:boolean;
 
@@ -28,6 +28,8 @@ export class NavbarComponent implements OnInit {
   handleLogout(){
     localStorage.clear();
     this.store.dispatch(new UserLogout())
+
+    window.location.reload();
   }
 
 }

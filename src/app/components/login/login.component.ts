@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
       else{
         localStorage.setItem("id", user[0].id);
         localStorage.setItem("LoggedSuccess", "true");
+        window.location.reload();
         this.router.navigate(['/home'])
       }
     })
