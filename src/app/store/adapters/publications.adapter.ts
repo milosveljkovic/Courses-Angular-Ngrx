@@ -21,7 +21,7 @@ const {
     selectEntities,
     selectAll,
     selectTotal
-} = publicationsAdapter.getSelectors(getCommentState);  //u zagradi je bilo getCommentState
+} = publicationsAdapter.getSelectors(getCommentState);
 
 export const selectAllPublications=selectAll;
 export const selectTotalPublications=selectTotal;

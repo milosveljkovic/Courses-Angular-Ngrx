@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { State } from 'src/app/store/reducers/root.reducer';
 import {PublicationState,selectAllPublications} from '../../store/adapters/publications.adapter'
 import {Router} from '@angular/router'
 import { LoadUser } from 'src/app/store/actions/user.action';

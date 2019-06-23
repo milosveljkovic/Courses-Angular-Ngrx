@@ -21,7 +21,6 @@ export class CommentService {
    }
 
     postComment(comment:myComment):Observable<myComment>{
-      console.log(comment);
      return this.http.post<myComment>(`${comments_url}`,comment)
    }
 

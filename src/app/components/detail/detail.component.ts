@@ -44,7 +44,6 @@ export class DetailComponent implements OnInit {
     }
     this.commentsForThisPublication(this.comments$,this.publication.id);
     this.didILeaveComment(this.user,this.comments$);
-    console.log(this.alreadyLeftAComment);
   }
 
   }

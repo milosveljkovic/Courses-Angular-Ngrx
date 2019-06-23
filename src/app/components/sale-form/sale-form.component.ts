@@ -1,7 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import {PublicationState} from '../../store/adapters/publications.adapter'
 import {UpdatePublication} from '../../store/actions/publications.action'
 import { Router } from '@angular/router';
 import { State } from 'src/app/store/reducers/root.reducer';
@@ -17,7 +16,6 @@ export class SaleFormComponent implements OnInit {
   publication:Publication;
 
   emptyField:boolean;
-
   newPrice=new FormControl('');
 
   constructor(private store:Store<State>,private router:Router) {

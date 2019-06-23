@@ -13,8 +13,6 @@ export function commentsReducer(state:CommentsState=initialState,action:Comments
             return commentsAdapter.addOne(action.mycomment, state)
         }
         case CommentsActionsTypes.LOAD_All_COMMENTS_SUCCESS:{
-            console.log("LOAD_All_COMMENTS_SUCCESS");
-            console.log(action.comments);
             return commentsAdapter.addAll(action.comments, state)
         }
         default:

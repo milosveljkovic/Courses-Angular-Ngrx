@@ -52,8 +52,7 @@ import { UserEffects } from './store/effects/user.effects';
       maxAge: 25
     }),
     RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      appRoutes
     ),
     ReactiveFormsModule
   ],

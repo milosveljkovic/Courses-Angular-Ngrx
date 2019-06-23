@@ -22,7 +22,6 @@ export class NavbarComponent implements OnInit {
     }else{
       this.alreadyLogged=false;
     }
-    console.log(this.alreadyLogged);
   }
 
   handleLogout(){

@@ -23,7 +23,7 @@ const {
     selectEntities,
     selectAll,
     selectTotal
-} = commentsAdapter.getSelectors(getCommentState);  //u zagradi je bilo getCommentState
+} = commentsAdapter.getSelectors(getCommentState);
 
 export const selectAllComments=selectAll;
 export const selectTotalComments=selectTotal;
