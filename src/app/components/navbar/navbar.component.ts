@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private store:Store<State>,private router:Router) { }
+  constructor(private store:Store<State>) { }
 
   alreadyLogged:boolean;
 

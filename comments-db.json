@@ -17,6 +17,15 @@
       "email": "udemy@gmail.com",
       "comment": "This is a good course, I learned a lot on new things and already used some of these in the real world project.",
       "rating": 8
+    },
+    {
+      "id": 3,
+      "publicationId": 2,
+      "dateOfPublish": "1561251538682",
+      "name": "Stride",
+      "email": "stride@gmail.com",
+      "comment": " like to course but when you have question, it's hard to get response in timely manner. Other than that, i like the course",
+      "rating": 8
     }
   ]
 }

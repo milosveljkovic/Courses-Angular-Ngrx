@@ -7,7 +7,8 @@
       "password": "milos",
       "mypublications": [
         1,
-        2
+        2,
+        6
       ],
       "mycomments": []
     },
@@ -34,6 +35,16 @@
       ],
       "mycomments": [
         2
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Stride",
+      "email": "stride@gmail.com",
+      "password": "stride",
+      "mypublications": [],
+      "mycomments": [
+        3
       ]
     }
   ]

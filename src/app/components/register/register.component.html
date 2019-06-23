@@ -1,4 +1,7 @@
 <div class="container fluid px-5 py-2 text-center" style="width: 500px">
+    <p *ngIf="emptyFields" style="background-color: rgb(245, 96, 96)" class="border border-danger rounded">
+      Please fill in the required fields.
+    </p>
     <h4>Registration</h4>
     <form [formGroup]="user" (ngSubmit)="onSubmit()">
           <label class="mt-3">
@@ -13,6 +16,9 @@
             Password:
           </label>
           <input type="password" class="form-control"  placeholder="Enter password"  formControlName="password">
+          <p *ngIf="passwordError" style="background-color: rgb(245, 96, 96)" class="border border-danger rounded">
+            <small>Your password must be at least 6 characters long.</small>
+          </p>
         <button class="btn btn-primary mt-3" type="submit" [disabled]="!user.valid">
           Submit
         </button> 
