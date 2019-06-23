@@ -46,6 +46,18 @@
       "mycomments": [
         3
       ]
+    },
+    {
+      "id": 5,
+      "name": "Patrick Kulubi",
+      "email": "patric@gmail.com",
+      "password": "patric",
+      "mypublications": [],
+      "mycomments": [
+        4,
+        5,
+        6
+      ]
     }
   ]
 }

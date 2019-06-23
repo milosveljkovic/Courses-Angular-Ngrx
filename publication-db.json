@@ -27,8 +27,8 @@
       "description": "What you will learn: Angular / NGRX ",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
       "rating": {
-        "votersRatingSum": 25,
-        "numberOfVoters": 3
+        "votersRatingSum": 35,
+        "numberOfVoters": 4
       },
       "publisher": "Milos Veljkovic",
       "newPrice": 100
@@ -77,8 +77,8 @@
       "description": "Learn C#, a powerful modern language, from scratch. No prior programming experience is necessary.",
       "imageUrl": "https://www.inventivestudio.co.uk/wp-content/uploads/2018/04/unity3d_logo.png",
       "rating": {
-        "votersRatingSum": 0,
-        "numberOfVoters": 0
+        "votersRatingSum": 9,
+        "numberOfVoters": 1
       },
       "publisher": "Udemy"
     },
@@ -93,8 +93,8 @@
       "description": "Learn step by step how to build Spring applications using Spring Framework 5 and Spring Boot 2",
       "imageUrl": "https://spring.io/img/homepage/icon-spring-framework.svg",
       "rating": {
-        "votersRatingSum": 0,
-        "numberOfVoters": 0
+        "votersRatingSum": 7,
+        "numberOfVoters": 1
       },
       "publisher": "Milos Veljkovic"
     }

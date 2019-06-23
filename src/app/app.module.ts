@@ -27,6 +27,7 @@ import { SaleFormComponent } from './components/sale-form/sale-form.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { UserEffects } from './store/effects/user.effects';
+import { PopularPublicationsComponent } from './components/popular-publications/popular-publications.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { UserEffects } from './store/effects/user.effects';
     CommentComponent,
     SaleFormComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PopularPublicationsComponent
   ],
   imports: [
     BrowserModule,

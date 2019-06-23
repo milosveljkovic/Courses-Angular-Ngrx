@@ -26,6 +26,33 @@
       "email": "stride@gmail.com",
       "comment": " like to course but when you have question, it's hard to get response in timely manner. Other than that, i like the course",
       "rating": 8
+    },
+    {
+      "id": 4,
+      "publicationId": 2,
+      "dateOfPublish": "1561321796718",
+      "name": "Patrick Kulubi",
+      "email": "patric@gmail.com",
+      "comment": "Really interesting how the instructor uses different viewpoints to show how useful our work will be.",
+      "rating": 10
+    },
+    {
+      "id": 5,
+      "publicationId": 5,
+      "dateOfPublish": "1561321870254",
+      "name": "Patrick Kulubi",
+      "email": "patric@gmail.com",
+      "comment": "This course is truly amazing. The way Rick and Ben explain the material makes it easy for newbies to start learning C# and Unity.",
+      "rating": 9
+    },
+    {
+      "id": 6,
+      "publicationId": 6,
+      "dateOfPublish": "1561321945757",
+      "name": "Patrick Kulubi",
+      "email": "patric@gmail.com",
+      "comment": "The content seems right. The audio seems a bit weak in places. Could benefit from some structured coding exercises.",
+      "rating": 7
     }
   ]
 }
